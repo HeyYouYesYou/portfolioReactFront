@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.underline-animation {
+  @apply before:absolute before:bottom-0 before:left-0 before:block before:h-[1px] before:w-full before:scale-x-0 before:bg-emeraldDark before:duration-300 before:ease-in before:content-[''] hover:before:scale-x-100;
+}
+.svgGrayscale {
+  @apply transition duration-300 md:grayscale hover:filter-none;
+}
