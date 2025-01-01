@@ -1,9 +1,22 @@
-import { ErrorsCard } from "../templates/ErrorsCard";
+import { NavLink, useRouteError } from "react-router-dom";
+
+import { Title } from "../templates/Title";
 
 export default function ErrorPage() {
+  const error = useRouteError();
+
   return (
     <article className="bg-grayLight min-h-lvh flex justify-center items-center">
-      <ErrorsCard title="Oops, something went wrong..." />
+      <div className="max-w-full opacity-0 bg-white border-redDark border-[1px] p-8 rounded-sm flex flex-col items-end animate-fadeIn">
+        <Title>
+          {error.status == "404"
+            ? "404 Page Not Found"
+            : "Oops, something went wrong..."}
+        </Title>
+        <button className="bg-Lime font-medium  border-[1px] transition-all mt-8 rounded-sm max-w-fit px-4 py-2 text-grayLight hover:bg-transparent hover:text-Lime hover:border-[1px] border-Lime">
+          <NavLink to="/home">go to Home page</NavLink>
+        </button>
+      </div>
     </article>
   );
 }

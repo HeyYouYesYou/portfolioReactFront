@@ -13,7 +13,6 @@ import Experience from "./components/pages/Experience";
 import Skills from "./components/pages/Skills";
 import Contact from "./components/pages/Contact";
 import ErrorPage from "./components/pages/ErrorPage";
-import NotFound from "./components/pages/NotFound";
 
 import { restApiPath } from "./restApiPath";
 import { GetDataFromBack } from "./API/GetDataFromBack";
@@ -53,7 +52,6 @@ function App() {
           element={<Contact />}
           loader={() => GetDataFromBack(restApiPath.contact)}
         />
-        <Route path="*" element={<NotFound />} />
       </Route>
     )
   );
