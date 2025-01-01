@@ -1,7 +1,7 @@
 import { useLoaderData } from "react-router-dom";
 
 import { BasedStileCard } from "../templates/BasedStileCard";
-import { PageCard } from "../templates/pageCard";
+import { PageCard } from "../templates/PageCard";
 import { Title } from "../templates/Title";
 import { Subtitle } from "../templates/Subtitle";
 import { AccordionDtDdItem } from "../templates/AccordionDtDdItem";

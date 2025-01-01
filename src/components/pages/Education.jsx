@@ -2,7 +2,7 @@ import { useLoaderData } from "react-router-dom";
 
 import { Title } from "../templates/Title";
 import { Subtitle } from "../templates/Subtitle";
-import { PageCard } from "../templates/pageCard";
+import { PageCard } from "../templates/PageCard";
 import { BasedStileCard } from "../templates/BasedStileCard";
 import { DataSinceUntil } from "../templates/DataSinceUntil";
 
