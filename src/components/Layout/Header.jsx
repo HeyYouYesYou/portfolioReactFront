@@ -2,7 +2,6 @@ import { NavLink } from "react-router-dom";
 
 import { routesPathList } from "../../routesPathList";
 import { useState } from "react";
-//import { Backdrop } from "./Backdrop";
 
 export default function Header() {
   const [isVisible, toggleVisible] = useState(false);
@@ -68,7 +67,6 @@ export default function Header() {
       >
         <ul className={`flex flex-col items-center text-2xl `}>{navMenu}</ul>
       </nav>
-      {/* {isVisible && <Backdrop onClickHandler={handlerMenuVisibility} />} */}
     </header>
   );
 }

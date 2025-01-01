@@ -11,22 +11,22 @@ export default function Skills() {
   let workflows;
 
   const skillsAndTech = pageData.data.map((skill, i) => {
-    if (skill.attributes.slug !== "workflow") {
+    if (skill.slug !== "workflow") {
       return (
         <li
-          key={skill.attributes.slug}
+          key={skill.slug}
           className="opacity-0  animate-slideIn"
           style={{ "--delay": i * 0.15 + "s" }}
         >
           <img
             className="sm:w-12 w-16 rounded my-2 svgGrayscale"
-            src={`http://localhost:1337${skill.attributes.logo.data.attributes.url}`}
-            alt={skill.attributes.logo.data.attributes.alternativeText}
+            src={`https://api.andyepik.pro${skill.logo.url}`}
+            alt={skill.logo.alternativeText}
           />
         </li>
       );
     } else {
-      workflows = skill.attributes;
+      workflows = skill;
     }
   });
 
@@ -39,8 +39,8 @@ export default function Skills() {
       >
         <img
           className="mr-2"
-          src={`http://localhost:1337${workflows.logo.data.attributes.url}`}
-          alt={`http://localhost:1337${workflows.logo.data.attributes.alternativeText}`}
+          src={`https://api.andyepik.pro${workflows.logo.url}`}
+          alt={`https://api.andyepik.pro${workflows.logo.alternativeText}`}
         />
         {workflow.workflowTitle}
       </li>

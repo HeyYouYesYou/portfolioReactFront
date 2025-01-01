@@ -18,7 +18,7 @@ export default function Education() {
       websiteUrl,
       shortDescription,
       longDescription,
-    } = edu.attributes;
+    } = edu;
 
     return (
       <li

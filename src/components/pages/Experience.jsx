@@ -13,9 +13,7 @@ export default function Experience() {
   let notRelevantExpList = [];
 
   notRelevantExpList = pageData.data.map((exp) => {
-    return (
-      <AccordionDtDdItem key={exp.attributes.slug} AccItem={exp.attributes} />
-    );
+    return <AccordionDtDdItem key={exp.slug} AccItem={exp} />;
   });
 
   return (

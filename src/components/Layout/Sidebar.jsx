@@ -22,16 +22,12 @@ export default function Sidebar() {
         <article className=" flex flex-col items-center">
           <img
             className="mb-8  mt-8 sd:mt-24 h-[200px] w-[200px] rounded-full border-8 border-Lime border-opacity-45 object-cover"
-            src={`http://localhost:1337${pageData.data.attributes.photo.data[0].attributes.url}`}
-            alt={
-              pageData.data.attributes.photo.data[0].attributes.alternativeText
-            }
+            src={`https://api.andyepik.pro${pageData.data.photo.url}`}
+            alt={pageData.data.photo.alternativeText}
           />
-          <h3 className="text-3xl font-semibold">
-            {pageData.data.attributes.title}
-          </h3>
+          <h3 className="text-3xl font-semibold">{pageData.data.title}</h3>
           <h4 className="text-2xl mx-4 text-center text-brownLight">
-            {pageData.data.attributes.description}
+            {pageData.data.description}
           </h4>
         </article>
         <nav className="sd:my-12 my-8 font-sans text-base font-normal">

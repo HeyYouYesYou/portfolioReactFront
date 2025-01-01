@@ -1,11 +1,12 @@
 export const restApiPath = {
-  sidebar: "http://localhost:1337/api/side-bar?populate[0]=photo",
+  sidebar: "https://api.andyepik.pro/api/side-bar?populate[0]=photo",
   homepage:
-    "http://localhost:1337/api/home-page?populate[0]=coverImages.media&populate[1]=DownloadCV.DocForDownload",
-  education: "http://localhost:1337/api/educations",
-  experience: "http://localhost:1337/api/experiences?populate[0]=coverImages",
+    "https://api.andyepik.pro/api/home-page?populate[0]=coverImages&populate[1]=DownloadCV",
+  education: "https://api.andyepik.pro/api/educations",
+  experience:
+    "https://api.andyepik.pro/api/experiences?populate[0]=coverImages",
   skills:
-    "http://localhost:1337/api/skills?populate[0]=logo&populate[1]=Workflows",
+    "https://api.andyepik.pro/api/skilland-teches?populate[0]=logo&populate[1]=Workflows",
   contact:
-    "http://localhost:1337/api/contact?populate[1]=address.googleMaps&populate[0]=socialLinks.logo",
+    "https://api.andyepik.pro/api/contact?populate[0]=socialLinks.logo&populate[1]=address.googleMaps",
 };

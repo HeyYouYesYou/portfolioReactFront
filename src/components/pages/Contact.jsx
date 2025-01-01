@@ -9,7 +9,7 @@ import { SubmitForm } from "../templates/SubmitForm";
 export default function Contact() {
   const pageData = useLoaderData();
 
-  const socialLinks = pageData.data.attributes.socialLinks.map((link, i) => {
+  const socialLinks = pageData.data.socialLinks.map((link, i) => {
     return (
       <li
         key={link.label}
@@ -19,15 +19,15 @@ export default function Contact() {
         <a href={link.url} target="_blank">
           <img
             className="w-16 md:w-16 m-2 svgGrayscale"
-            src={`http://localhost:1337${link.logo.data.attributes.url}`}
-            alt={`http://localhost:1337${link.logo.data.attributes.alternativeText}`}
+            src={`https://api.andyepik.pro${link.logo.url}`}
+            alt={`https://api.andyepik.pro${link.logo.alternativeText}`}
           />
         </a>
       </li>
     );
   });
 
-  const tel = pageData.data.attributes.address.tel;
+  const tel = pageData.data.address.tel;
   const formattedTelNumber =
     tel.slice(0, 3) +
     "-" +
@@ -40,7 +40,7 @@ export default function Contact() {
   return (
     <PageCard>
       <BasedStileCard>
-        <Title>{pageData.data.attributes.title}</Title>
+        <Title>{pageData.data.title}</Title>
 
         <section className="my-8">
           <Subtitle>Social media:</Subtitle>
@@ -52,30 +52,29 @@ export default function Contact() {
         <section className="sm:flex justify-between ">
           <address className="p-4 rounded-sm animate-fadeIn opacity-0">
             <a
-              title={pageData.data.attributes.address.googleMaps.label}
+              title={pageData.data.address.googleMaps.label}
               target="_blank"
-              href={pageData.data.attributes.address.googleMaps.url}
+              href={pageData.data.address.googleMaps.url}
             >
               <div className="px-4 py-2  hover:shadow-2xl shadow-LimeGray">
                 <Subtitle>Address: </Subtitle>
                 <p className="mt-2">
-                  {pageData.data.attributes.address.Country}
+                  {pageData.data.address.Country}
                   {", "}
-                  {pageData.data.attributes.address.district}
+                  {pageData.data.address.district}
                 </p>
                 <p>
-                  {pageData.data.attributes.address.city}
+                  {pageData.data.address.city}
                   {", "}
-                  {pageData.data.attributes.address.postIndex}
+                  {pageData.data.address.postIndex}
                 </p>
                 <p>
-                  {pageData.data.attributes.address.street}{" "}
-                  {pageData.data.attributes.address.build}
+                  {pageData.data.address.street} {pageData.data.address.build}
                 </p>
               </div>
             </a>
             <p className="px-4  my-8 hover:shadow-xl shadow-LimeGray">
-              <a href={`tel:${pageData.data.attributes.address.tel}`}>
+              <a href={`tel:${pageData.data.address.tel}`}>
                 {formattedTelNumber}
               </a>
             </p>
