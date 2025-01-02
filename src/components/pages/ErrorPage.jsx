@@ -5,6 +5,7 @@ import { Subtitle } from "../templates/Subtitle";
 
 export default function ErrorPage() {
   const error = useRouteError();
+  console.log(error);
 
   return (
     <article className="bg-grayLight min-h-lvh flex justify-center items-center">
